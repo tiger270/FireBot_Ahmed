@@ -3179,7 +3179,6 @@ return;
 });
 
 
-const prefix = "!";
 
 client.on('guildMemberAdd', member => {
   if(!ar[member.guild.id]) ar[member.guild.id] = {
