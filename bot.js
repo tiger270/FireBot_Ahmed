@@ -3005,7 +3005,6 @@ client.on('ready', () => {//new ready event
   }, 5000);//the rainbow time
 })
 
-const client = new Discord.Client();
 const prefix = "!";
 
 
