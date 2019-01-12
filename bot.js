@@ -2879,7 +2879,6 @@ client.on('ready', () => {//new ready event
 
 const bot = new Discord.Client();
 var Canvas = require('canvas');// npm i canvas
-var jimp = require('jimp');// npm i jimp 
 const fs = require("fs");// npm i fs
 
       bot.on('guildMemberAdd', member => {
