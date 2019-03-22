@@ -2846,6 +2846,27 @@ client.on("message", (message) => {
     }
 });  
 
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'fox-welcome');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField('🎽 | Name :  ',`${member}`)
+        .addField('📢 | نورت السيرفر' , `WelCome To Server, ${member}`)
+        .addField('🆔 | ID :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+               
+                  .addField("GoodLuck! :revolving_hearts: ",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' Server:', `${member.guild.name}`,true)
+                                       
+     .setFooter(`ttt`)
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
 
 //MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN)
