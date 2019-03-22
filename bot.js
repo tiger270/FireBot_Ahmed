@@ -2862,7 +2862,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' Server:', `${member.guild.name}`,true)
                                        
-     .setFooter(`ttt`)
+     .setFooter(`!,Foox-Cummonity ♥,,:!`)
         .setTimestamp()
    
       channel.sendEmbed(embed);
