@@ -3009,7 +3009,5 @@ bot.on("guildMemberAdd", async (member, client, message, args, level) => {
 
 
 
-bot.login(config.token);
-
 //MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN)
