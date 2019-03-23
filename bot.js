@@ -2845,6 +2845,8 @@ client.on("message", (message) => {
         channel.delete()
     }
 });  
+
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'fox-welcome');
     let memberavatar = member.user.avatarURL
