@@ -2846,9 +2846,16 @@ client.on("message", (message) => {
     }
 });  
 
+const Discord = require('discord.js');
+const superagent = require("superagent");
+const moment = require("moment");
+const fs = require("fs");
+const bot = new Discord.Client();
 
-const prefix = config.prefix;!
-const ownerID = config.ownerID;314522365218521099
+const config = require("./db/config.json");
+
+const prefix = config.prefix;
+const ownerID = config.ownerID;
 
 bot.on('message', message => {
     
@@ -2894,7 +2901,7 @@ bot.on("guildMemberRemove", async (member, client, message, args, level) => {
             
                         var background = JSON.parse(fs.readFileSync("./db/backgroundl.json", "utf8"))
         if (!background[guild.id]) background[guild.id] = {}
-        //if (!background[guild.id].nick) background[guild.id].nick = 'https://cdn.discordapp.com/attachments/558724909992509441/558956532570521610/welcome_4.png';
+        //if (!background[guild.id].nick) background[guild.id].nick = 'https://cdn.discordapp.com/attachments/478872920576360450/482558376052523008/download.jpg';
         if (!background[guild.id].nick) background[guild.id].nick = 'https://e.top4top.net/p_1036fhbbp1.png';
               fs.writeFile("./db/backgroundl.json", JSON.stringify(background), (err) => {
                 if (err) console.log(err)
@@ -3000,6 +3007,9 @@ bot.on("guildMemberAdd", async (member, client, message, args, level) => {
     }
 });
 
+
+
+bot.login(config.token);
 
 //MHSTR END NOW THIS IS END
 client.login(process.env.BOT_TOKEN)
