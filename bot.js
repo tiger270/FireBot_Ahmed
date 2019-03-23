@@ -2846,13 +2846,6 @@ client.on("message", (message) => {
     }
 });  
 
-const Discord = require('discord.js');
-const superagent = require("superagent");
-const moment = require("moment");
-const fs = require("fs");
-const bot = new Discord.Client();
-
-const config = require("./db/config.json");
 
 const prefix = config.prefix;!
 const ownerID = config.ownerID;314522365218521099
