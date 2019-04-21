@@ -517,6 +517,8 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!inv/لدعوة البوت الى سيرفرك』
 『!support/سيرفر الدعم』
 『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
+『 انشئ روم welcome
+لتفعيل الترحيب 』
 **
   `
 ,`
@@ -2848,16 +2850,16 @@ client.on("message", (message) => {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'fox-welcome');
+    let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField('?? | Name :  ',`${member}`)
-        .addField('?? | ???? ???????' , `WelCome To Server, ${member}`)
+        .addField('?? | ' , `WelCome To Server, ${member}`)
         .addField('?? | ID :', "**[" + `${member.id}` + "]**" )
-                .addField('?| ??? ????? ???',`${member.guild.memberCount}`)
+                .addField('| ',`${member.guild.memberCount}`)
                
                   .addField("GoodLuck! :revolving_hearts: ",`<@` + `${member.id}` + `>`, true)
                      
