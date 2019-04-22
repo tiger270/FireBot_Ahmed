@@ -2849,7 +2849,6 @@ client.on("message", (message) => {
 });  
 
 
-const Discord = require('discord.js');
 const bot = new Discord.Client();
 var Canvas = require('canvas');// npm i canvas
 var jimp = require('jimp');// npm i jimp 
